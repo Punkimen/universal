@@ -1,0 +1,186 @@
+.cards {}
+
+.cards-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #DFE5E8;
+
+  &:first-child {
+    border-top: 1px solid #DFE5E8;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 16px;
+  }
+
+  &__info {}
+
+  &__num {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  &__status {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .control {
+    width: 100%;
+    margin: 0;
+
+    &_indicator {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.disabled {
+    .control {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+  }
+}
+
+.add-card__btn {
+  width: max-content;
+  margin: 34px auto 0;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  color: #2E63E6;
+
+  img {
+    display: block;
+    margin-right: 8px;
+  }
+}
+
+
+.add-card {
+
+  &__wrapper {
+    position: relative;
+    min-height: 290px;
+    margin-bottom: 60px;
+  }
+
+  &__face {
+    min-height: 190px;
+    height: 190px;
+    padding: 24px;
+    max-width: 302px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #18192F;
+    border-radius: 16px;
+    border: 1px solid #18192F;
+    z-index: 2;
+
+    .main-block {
+
+      &__field {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      &__field-label {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      &__input {
+        background: rgba(96, 125, 139, 0.2);
+        color: #fff;
+
+        &:hover,
+        &:focus {
+          border: 1px solid rgba(96, 125, 139, 0.2);
+        }
+      }
+
+      &__field-error {}
+    }
+
+  }
+
+  &__back {
+    min-height: 190px;
+    height: 190px;
+    padding: 24px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    max-width: 302px;
+    width: 100%;
+    background: #EEF1F7;
+    border: 1px solid rgba(96, 125, 139, 0.6);
+    border-radius: 16px;
+
+    .main-block {
+
+      &__field {}
+
+      &__field-label {}
+
+      &__input {
+        background: #D1DAE2;
+        border-color: #D1DAE2;
+
+        &:hover,
+        &:focus {
+          border: 1px solid #D1DAE2;
+        }
+      }
+
+      &__field-error {}
+    }
+
+  }
+
+  &__back-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &__info {
+    font-size: 12px;
+    max-width: 82px;
+    margin-right: 8px;
+    padding-bottom: 5px;
+  }
+
+  &__text {
+    max-width: 210px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+
+.card-small {
+
+  &__field {
+    width: 95px;
+  }
+}

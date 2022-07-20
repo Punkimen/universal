@@ -1,0 +1,32 @@
+.loan-info {
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid #DFE5E8;
+
+    &:first-child {
+      border-top: 1px solid #DFE5E8;
+
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 15px;
+  }
+
+  &__value {
+    font-size: 17px;
+    font-weight: 500;
+  }
+}
+
+.loan-info__additional-info {
+  padding: 24px 0;
+  font-size: 14px;
+  font-weight: 300;
+}

@@ -1,0 +1,60 @@
+.diposits {
+  margin-bottom: 47px;
+
+  &__text {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+}
+
+.diposits-item {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #EEF1F7;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__header {
+    padding: 12px;
+    background: rgba(96, 125, 139, 0.2);
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: 500;
+    color: #607D8B;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__body {
+    padding: 8px 12px;
+  }
+
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__label {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 2px;
+  }
+
+  &__val {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 15px;
+  }
+}

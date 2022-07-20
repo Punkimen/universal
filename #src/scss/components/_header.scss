@@ -1,0 +1,42 @@
+.header {
+  padding: 68px 0;
+  background: #EEF1F7;
+
+  @media(max-width:$md3) {
+    padding: 40px 0;
+
+  }
+
+
+  @media(max-width:$md5) {
+    padding: 14px 0;
+    background: #fff;
+  }
+}
+
+.link-back {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: #607D8B;
+  transition: all ease .2s;
+
+  @media(max-width:$md5) {
+    font-size: 14px;
+  }
+
+  svg {
+    display: block;
+    fill: #607D8B;
+    transition: all ease .2s;
+    margin-right: 12px;
+  }
+
+  &:hover {
+    color: #2E63E6;
+
+    svg {
+      fill: #2E63E6;
+    }
+  }
+}

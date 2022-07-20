@@ -1,0 +1,357 @@
+$md1: 1440px;
+$md2: 1200px;
+$md3: 992px;
+$md4: 767px;
+$md5: 568px;
+$md6: 412px;
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "SFPro", serif;
+    background: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #18192F;
+    overflow-x: hidden;
+
+    &.overlay {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 1330px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.underline-link {
+    font-weight: 500;
+    text-decoration: underline;
+    color: #2E63E6;
+
+    &.main-link {
+        color: #2E63E6;
+    }
+}
+
+.control {
+    position: relative;
+    padding-left: 25px;
+    display: inline-block;
+
+    &:hover {
+        input~.control_indicator {
+            border-color: #2E63E6;
+        }
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+
+        &:checked~.control_indicator {
+            border-color: #2E63E6;
+            background: #2E63E6;
+        }
+
+        &:checked~.control_indicator:after {
+            display: block;
+        }
+
+        &.error~.control_indicator {
+            border-color: #EB5757;
+        }
+    }
+
+    label.error {
+        height: 0;
+        opacity: 0;
+    }
+
+    .control_indicator {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        left: 0;
+        top: 1px;
+        border: 2px solid #DFE1E6;
+
+        &:hover {
+            border-color: #2E63E6;
+        }
+
+        &:after {
+            content: '';
+            width: 11px;
+            height: 9px;
+            background-image: url(../img/icon/checkbox.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &_center {
+        .control_indicator {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &-radio {
+        &:hover {
+            input~.control_indicator {
+                border-color: #2E63E6;
+            }
+        }
+
+        .control_indicator {
+            border-radius: 50%;
+
+            &:hover {
+                border-color: #2E63E6;
+            }
+
+            &:after {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: #fff;
+            }
+        }
+
+        input {
+            &:checked~.control_indicator {
+                border-color: #2E63E6;
+                background: #2E63E6;
+            }
+
+            &:checked~.control_indicator:after {
+                display: block;
+            }
+
+            &.error~.control_indicator {
+                border-color: #EB5757;
+            }
+        }
+    }
+
+    &-checkbox {
+        .control_indicator {
+            border-radius: 3px;
+
+            &:after {
+                border-radius: 1px;
+            }
+        }
+    }
+}
+
+.contol-group__text {
+    position: relative;
+    z-index: 3;
+
+    &_small {
+        font-size: 14px;
+    }
+}
+
+.btn-reset {
+    font-size: 15px;
+    font-family: "SFPro", serif;
+    display: block;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.main-link {
+    width: max-content;
+    display: block;
+    font-family: "SFPro", serif;
+    color: #A0B1B9;
+    margin: 0 auto;
+    transition: all 0.2s;
+
+    &:hover {
+        color: #2E63E6;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center-btn {
+    margin: 0 auto;
+}
+
+
+// switch 
+.costumn-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flipswitch {
+    width: 40px;
+}
+
+.flipswitch-switch {
+    width: 22px;
+    height: 22px;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    right: 17px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.flipswitch-cb:checked+.flipswitch-label .flipswitch-inner {
+    margin-left: 0;
+}
+
+.flipswitch-cb:checked+.flipswitch-label .flipswitch-switch {
+    right: 1px;
+}
+
+.flipswitch {
+    position: relative;
+    width: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.flipswitch input[type=checkbox] {
+    display: none;
+}
+
+.flipswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    background: #A9A9A9;
+    border-radius: 50px;
+}
+
+.flipswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -ms-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.flipswitch-inner:before,
+.flipswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 24px;
+    padding: 0;
+    line-height: 24px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #A9A9A9;
+}
+
+.flipswitch-inner:before {
+    content: "";
+    padding-left: 12px;
+    background-color: #2E63E6;
+    color: #FFFFFF;
+}
+
+// switch end
+
+// scrollbar
+.mCSB_inside>.mCSB_container {
+    margin-right: 10px;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #A0B1B9 !important;
+    opacity: 1 !important;
+    margin: 0 0 0 auto;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+    opacity: 0 !important;
+}
+
+.copy-text {
+    display: flex;
+    align-items: center;
+
+    span {
+        margin-right: 4px;
+    }
+}
