@@ -146,6 +146,11 @@
         margin-bottom: 10px;
       }
     }
+
+    &_fz16 {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__field {
@@ -202,6 +207,7 @@
     display: block;
     font-family: "SFPro", serif;
     font-size: 18px;
+    line-height: 22px;
     text-align: center;
     margin: 0 auto;
     background: #2E63E6;
@@ -209,7 +215,7 @@
     border-radius: 16px;
     color: #fff;
     cursor: pointer;
-    padding: 16px 30px;
+    padding: 15px 30px;
     max-width: 327px;
     width: 100%;
     transition: all ease .2s;
@@ -241,6 +247,10 @@
   img {
     display: block;
     margin-right: 8px;
+  }
+
+  &.image-btn {
+    padding: 11px 30px;
   }
 }
 
@@ -298,6 +308,9 @@ select.main-block__input {
   }
 
   &__text {
+    font-size: 18px;
+
+    line-height: 22px;
     max-width: 205px;
     width: 100%;
 
@@ -319,6 +332,9 @@ select.main-block__input {
 }
 
 .pep-content {
+  min-height: 300px;
+  max-height: 50vh;
+  overflow: auto;
 
   &__title {
     font-size: 17px;
@@ -328,8 +344,17 @@ select.main-block__input {
 
   &__list {
     list-style: circle;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 
+    &_large {
+      font-size: 16px;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
 
     li {
       list-style: disc;
@@ -446,6 +471,10 @@ select.main-block__input {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
   }
 
   &__img {
@@ -465,7 +494,21 @@ select.main-block__input {
     text-align: center;
     font-size: 15px;
     font-weight: 300;
+    max-width: 265px;
+    margin: 0 auto;
   }
+
+  &__btn {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.liveness-success__text {
+  max-width: 250px;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 auto;
 }
 
 .liveness-explanation {
@@ -491,6 +534,8 @@ select.main-block__input {
 }
 
 .contracts {
+  margin-top: 48px;
+
   &__content {
     padding: 20px 20px 0 20px;
     border: 8px solid #A0B1B9;
@@ -551,6 +596,34 @@ img.success-img {
 
   @media(max-width:$md4) {
     margin-bottom: 32px;
+  }
+}
+
+.choice {
+  .main-block__text {
+    max-width: 365px;
+  }
+}
+
+.debit-card {
+  .main-block__middle {
+    .main-block__text {
+      margin-bottom: 80px;
+
+      @media(max-width:$md5) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.diia {
+  .main-block__middle {
+    .main-block__text {
+      max-width: 355px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 }
 

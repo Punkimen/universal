@@ -180,17 +180,16 @@ li {
 
 .control .control_indicator:after {
   content: "";
-  width: 11px;
-  height: 9px;
+  width: 10px;
+  height: 8px;
   background-image: url(../img/icon/checkbox.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 2px;
+  left: 1px;
 }
 
 .control_center .control_indicator {
@@ -381,6 +380,14 @@ li {
   margin-right: 4px;
 }
 
+.medium-weight {
+  font-weight: 500;
+}
+
+.block {
+  display: block;
+}
+
 .header {
   padding: 68px 0;
   background: #EEF1F7;
@@ -496,6 +503,11 @@ li {
   margin-bottom: 10px;
 }
 
+.main-block__text_fz16 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .main-block__field:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -546,6 +558,7 @@ li {
   display: block;
   font-family: "SFPro", serif;
   font-size: 18px;
+  line-height: 22px;
   text-align: center;
   margin: 0 auto;
   background: #2E63E6;
@@ -553,7 +566,7 @@ li {
   border-radius: 16px;
   color: #fff;
   cursor: pointer;
-  padding: 16px 30px;
+  padding: 15px 30px;
   max-width: 327px;
   width: 100%;
   transition: all ease 0.2s;
@@ -581,6 +594,10 @@ li {
 .btn-flex img {
   display: block;
   margin-right: 8px;
+}
+
+.btn-flex.image-btn {
+  padding: 11px 30px;
 }
 
 select.main-block__input {
@@ -631,6 +648,8 @@ select.main-block__input option {
 }
 
 .request-data__text {
+  font-size: 18px;
+  line-height: 22px;
   max-width: 205px;
   width: 100%;
 }
@@ -648,6 +667,12 @@ select.main-block__input option {
   margin: 0 auto;
 }
 
+.pep-content {
+  min-height: 300px;
+  max-height: 50vh;
+  overflow: auto;
+}
+
 .pep-content__title {
   font-size: 17px;
   font-weight: 500;
@@ -656,6 +681,14 @@ select.main-block__input option {
 
 .pep-content__list {
   list-style: circle;
+  margin-bottom: 15px;
+}
+
+.pep-content__list_large {
+  font-size: 16px;
+}
+
+.pep-content__list_large li:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -824,14 +857,54 @@ select.main-block__input option {
 }
 
 .take-photo__inner {
+  position: relative;
   border-radius: 5px;
-  border: 2px dashed #18192F;
   padding: 8px;
   max-width: 416px;
   min-width: 250px;
   width: 100%;
   height: 416px;
   margin-bottom: 64px;
+}
+
+.take-photo__inner .border-photo {
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 10px;
+  width: 64px;
+  height: 64px;
+}
+
+.take-photo__inner .border-photo_1 {
+  border-radius: 10px 0 0 0;
+  border-right: none;
+  border-bottom: none;
+  top: 0;
+  left: 0;
+}
+
+.take-photo__inner .border-photo_2 {
+  border-radius: 0 10px 0 0;
+  border-left: none;
+  border-bottom: none;
+  top: 0;
+  right: 0;
+}
+
+.take-photo__inner .border-photo_3 {
+  border-radius: 0 0 10px 0;
+  border-left: none;
+  border-top: none;
+  right: 0;
+  bottom: 0;
+}
+
+.take-photo__inner .border-photo_4 {
+  border-radius: 0 0 0 10px;
+  border-right: none;
+  border-top: none;
+  left: 0;
+  bottom: 0;
 }
 
 .take-photo__img {
@@ -905,12 +978,11 @@ select.main-block__input option {
 
 .take-photo__img canvas {
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
-  bottom: 0;
-  top: 0;
   display: none;
 }
 
@@ -956,6 +1028,10 @@ select.main-block__input option {
   padding: 24px 0;
   font-size: 14px;
   font-weight: 300;
+}
+
+.cards {
+  margin-top: 40px;
 }
 
 .cards-item {
@@ -1124,6 +1200,10 @@ select.main-block__input option {
   margin: 0 auto;
 }
 
+.liveness__title:not(:last-child) {
+  margin-bottom: 8px;
+}
+
 .liveness__img {
   margin-bottom: 150px;
 }
@@ -1137,6 +1217,20 @@ select.main-block__input option {
   text-align: center;
   font-size: 15px;
   font-weight: 300;
+  max-width: 265px;
+  margin: 0 auto;
+}
+
+.liveness__btn {
+  max-width: 100%;
+  width: 100%;
+}
+
+.liveness-success__text {
+  max-width: 250px;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 auto;
 }
 
 .liveness-explanation {
@@ -1159,6 +1253,10 @@ select.main-block__input option {
 
 .liveness-explanation li:not(:last-child) {
   margin-bottom: 4px;
+}
+
+.contracts {
+  margin-top: 48px;
 }
 
 .contracts__content {
@@ -1211,6 +1309,20 @@ img.success-img {
   margin: 0 auto 90px;
 }
 
+.choice .main-block__text {
+  max-width: 365px;
+}
+
+.debit-card .main-block__middle .main-block__text {
+  margin-bottom: 80px;
+}
+
+.diia .main-block__middle .main-block__text {
+  max-width: 355px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .diposits {
   margin-bottom: 47px;
 }
@@ -1240,6 +1352,7 @@ img.success-img {
   font-size: 17px;
   font-weight: 500;
   color: #607D8B;
+  max-width: 330px;
 }
 
 .diposits-item__title:not(:last-child) {
@@ -1372,5 +1485,9 @@ img.success-img {
 
   .main-block__text {
     font-size: 16px;
+  }
+
+  .debit-card .main-block__middle .main-block__text {
+    margin-bottom: 40px;
   }
 }

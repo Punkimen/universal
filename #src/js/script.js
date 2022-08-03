@@ -19,8 +19,12 @@ inputs.forEach(input => {
   }
 })
 if ($('.contracts__content').length > 0) {
-  console.log('w');
   $('.contracts__content').mCustomScrollbar({
+    axis: "y",
+  });
+}
+if ($('.pep-content').length > 0) {
+  $('.pep-content').mCustomScrollbar({
     axis: "y",
   });
 }
@@ -40,3 +44,20 @@ if ($('.contracts__content').length > 0) {
     });
   })
 })();
+
+// validation
+const numInputs = document.querySelectorAll('.only-num')
+const dateInputs = document.querySelectorAll('.date-input')
+numInputs.forEach(el => {
+  el.addEventListener('input', e => {
+    let value = e.target.value
+    e.target.value = value.replace(/[^0-9\.]+/g, '');
+  })
+})
+
+dateInputs.forEach(el => {
+  el.addEventListener('input', e => {
+    let value = e.target.value
+
+  })
+})

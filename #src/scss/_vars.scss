@@ -132,18 +132,17 @@ li {
         }
 
         &:after {
-            content: '';
-            width: 11px;
-            height: 9px;
+            content: "";
+            width: 10px;
+            height: 8px;
             background-image: url(../img/icon/checkbox.svg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             display: none;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 2px;
+            left: 1px;
         }
     }
 
@@ -354,4 +353,12 @@ li {
     span {
         margin-right: 4px;
     }
+}
+
+.medium-weight {
+    font-weight: 500;
+}
+
+.block {
+    display: block;
 }
