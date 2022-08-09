@@ -29,21 +29,14 @@ repeatBtn.addEventListener('click', e => {
   timer(30, '#sms-timer', showBtn)
 })
 
-const maxLengthStop = (value, maxLength) => {
-  if (value.length > maxLength) {
-    return value.slice(0, maxLength)
-  } else {
-    return value
-  }
-}
-
 const inputCode = document.querySelector('#code-field')
+
 inputCode.addEventListener('input', e => {
   const target = e.target
   let str = target.value.split('')
-  if (str.join('').replace(/-/g, '').split('').length % 2 === 0) {
+  if (str.join('').replace(/-/g, '').split('').length % 2 === 0 && str.length < 6) {
     str.push('-')
   }
   target.value = str.join('')
-  target.value = maxLengthStop(target.value, 8)
+  // target.value = maxLengthStop(target.value, 8)
 })

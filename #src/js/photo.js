@@ -17,18 +17,20 @@ const webcamStartFirst = () => {
     })
     .catch(err => {
       $('.take-photo__error').show()
-      console.log(err);
+      snap.textContent = "Як надати доступ до камери"
     });
   snap.addEventListener('click', function () {
     snapPhoto(webcam, '#canvas')
+    snap.textContent = "Продовжити"
   })
-  snap.textContent = "Зберегти"
+
 };
 const repeatPhoto = () => {
   $(canvas).removeClass('show')
   webcamStartFirst()
   $('.take-photo__instruction').show()
   $('.take-photo__repeat').removeClass('show')
+  document.querySelector('#photo-do').textContent = " "
 }
 $('.take-photo__repeat').on('click', e => {
   repeatPhoto()

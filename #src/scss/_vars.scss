@@ -73,6 +73,7 @@ li {
     font-weight: 500;
     text-decoration: underline;
     color: #2E63E6;
+    text-underline-offset: 3px;
 
     &.main-link {
         color: #2E63E6;
@@ -361,4 +362,10 @@ li {
 
 .block {
     display: block;
+}
+
+input:focus {
+    &::placeholder {
+        opacity: 0;
+    }
 }

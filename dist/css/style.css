@@ -120,6 +120,7 @@ li {
   font-weight: 500;
   text-decoration: underline;
   color: #2E63E6;
+  text-underline-offset: 3px;
 }
 
 .underline-link.main-link {
@@ -388,6 +389,18 @@ li {
   display: block;
 }
 
+input:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
 .header {
   padding: 68px 0;
   background: #EEF1F7;
@@ -554,6 +567,24 @@ li {
   border-color: #2E63E6;
 }
 
+.main-block__input::-moz-placeholder {
+  font-family: "SFPro", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.main-block__input:-ms-input-placeholder {
+  font-family: "SFPro", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.main-block__input::placeholder {
+  font-family: "SFPro", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .main-block__btn {
   display: block;
   font-family: "SFPro", serif;
@@ -604,6 +635,8 @@ select.main-block__input {
   color: #a4a4a4;
   font-size: 16px;
   padding: 10px 12px 9px;
+  font-family: "SFPro", serif;
+  font-weight: 400;
 }
 
 select.main-block__input option {
@@ -668,7 +701,7 @@ select.main-block__input option {
 }
 
 .pep-content {
-  min-height: 300px;
+  min-height: 240px;
   max-height: 50vh;
   overflow: auto;
 }
@@ -797,8 +830,11 @@ select.main-block__input option {
 }
 
 .upload-doc__icon {
-  width: 24px;
-  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  margin-right: 10px;
 }
 
 .upload-doc__content {
@@ -937,6 +973,7 @@ select.main-block__input option {
   align-items: center;
   justify-content: center;
   color: #2E63E6;
+  font-weight: 500;
 }
 
 .take-photo__repeat.show {
@@ -1084,6 +1121,11 @@ select.main-block__input option {
   pointer-events: none;
 }
 
+.cards-item .control-radio .control_indicator:after {
+  display: none;
+  opacity: 0;
+}
+
 .add-card__btn {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -1226,6 +1268,10 @@ select.main-block__input option {
   width: 100%;
 }
 
+.liveness .main-block__title {
+  margin-bottom: 5px;
+}
+
 .liveness-success__text {
   max-width: 250px;
   font-size: 16px;
@@ -1238,11 +1284,13 @@ select.main-block__input option {
   font-weight: 300;
 }
 
-.liveness-explanation p {
-  margin-bottom: 16px;
+.liveness-explanation.main-block__text p:not(:last-child) {
+  margin-bottom: 17px;
 }
 
 .liveness-explanation ul {
+  font-size: 17px;
+  font-weight: 500;
   margin-bottom: 16px;
 }
 
@@ -1252,7 +1300,12 @@ select.main-block__input option {
 }
 
 .liveness-explanation li:not(:last-child) {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+.phone-block .contol-group__text {
+  max-width: 300px;
+  font-size: 15px;
 }
 
 .contracts {
@@ -1290,14 +1343,21 @@ select.main-block__input option {
 .signature__clear {
   margin: 0 auto 90px;
   color: #2E63E6;
+  display: flex;
+  align-items: center;
+}
+
+.signature__clear img {
+  display: block;
+  margin-right: 12px;
 }
 
 .signature__instruction {
   font-size: 14px;
   text-align: center;
-  font-weight: 300;
-  max-width: 400px;
-  margin: 0 auto;
+  font-weight: 400;
+  max-width: 291px;
+  margin: 0 auto 100px;
 }
 
 .signature__instruction a {
@@ -1428,6 +1488,10 @@ img.success-img {
     border: none;
   }
 
+  .main-block__top {
+    margin-bottom: 32px;
+  }
+
   .main-block__header:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -1448,12 +1512,25 @@ img.success-img {
     margin-bottom: 60px;
   }
 
+  .contracts {
+    margin-top: 32px;
+  }
+
+  .contracts__content {
+    max-height: 360px;
+    padding: 16px 6px 0 16px;
+  }
+
   .signature__clear {
     margin-bottom: 32px;
   }
 
   img.success-img {
     margin-bottom: 32px;
+  }
+
+  .choice .main-block__wrapper {
+    display: block;
   }
 }
 

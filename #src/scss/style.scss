@@ -49,6 +49,7 @@
     }
 
     @media(max-width:$md5) {
+
       min-height: calc(100vh - 95px);
     }
   }
@@ -61,6 +62,10 @@
 
   &__top {
     margin-bottom: 48px;
+
+    @media(max-width:$md4) {
+      margin-bottom: 32px;
+    }
   }
 
   &__header {
@@ -201,6 +206,12 @@
     &:active {
       border-color: #2E63E6;
     }
+
+    &::placeholder {
+      font-family: "SFPro", serif;
+      font-size: 16px;
+      font-weight: 400;
+    }
   }
 
   &__btn {
@@ -258,6 +269,8 @@ select.main-block__input {
   color: #a4a4a4;
   font-size: 16px;
   padding: 10px 12px 9px;
+  font-family: "SFPro", serif;
+  font-weight: 400;
 
   option {
     color: #18192F;
@@ -332,7 +345,7 @@ select.main-block__input {
 }
 
 .pep-content {
-  min-height: 300px;
+  min-height: 240px;
   max-height: 50vh;
   overflow: auto;
 
@@ -502,6 +515,10 @@ select.main-block__input {
     max-width: 100%;
     width: 100%;
   }
+
+  .main-block__title {
+    margin-bottom: 5px;
+  }
 }
 
 .liveness-success__text {
@@ -515,11 +532,13 @@ select.main-block__input {
   font-size: 15px;
   font-weight: 300;
 
-  p {
-    margin-bottom: 16px;
+  &.main-block__text p:not(:last-child) {
+    margin-bottom: 17px;
   }
 
   ul {
+    font-size: 17px;
+    font-weight: 500;
     margin-bottom: 16px;
   }
 
@@ -528,13 +547,24 @@ select.main-block__input {
     list-style-position: inside;
 
     &:not(:last-child) {
-      margin-bottom: 4px;
+      margin-bottom: 10px;
     }
+  }
+}
+
+.phone-block {
+  .contol-group__text {
+    max-width: 300px;
+    font-size: 15px;
   }
 }
 
 .contracts {
   margin-top: 48px;
+
+  @media(max-width: $md4) {
+    margin-top: 32px;
+  }
 
   &__content {
     padding: 20px 20px 0 20px;
@@ -545,6 +575,11 @@ select.main-block__input {
     margin-bottom: 16px;
     font-size: 10px;
     border-radius: 4px;
+
+    @media(max-width: $md4) {
+      max-height: 360px;
+      padding: 16px 6px 0 16px;
+    }
 
     p {
       &:not(:last-child) {
@@ -571,6 +606,13 @@ select.main-block__input {
   &__clear {
     margin: 0 auto 90px;
     color: #2E63E6;
+    display: flex;
+    align-items: center;
+
+    img {
+      display: block;
+      margin-right: 12px;
+    }
 
     @media(max-width:$md4) {
       margin-bottom: 32px;
@@ -580,9 +622,9 @@ select.main-block__input {
   &__instruction {
     font-size: 14px;
     text-align: center;
-    font-weight: 300;
-    max-width: 400px;
-    margin: 0 auto;
+    font-weight: 400;
+    max-width: 291px;
+    margin: 0 auto 100px;
 
     a {
       font-weight: 500;
@@ -601,7 +643,15 @@ img.success-img {
 
 .choice {
   .main-block__text {
+
     max-width: 365px;
+
+  }
+
+  @media(max-width:$md4) {
+    .main-block__wrapper {
+      display: block;
+    }
   }
 }
 

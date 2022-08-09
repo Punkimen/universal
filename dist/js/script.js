@@ -57,7 +57,13 @@ numInputs.forEach(el => {
 
 dateInputs.forEach(el => {
   el.addEventListener('input', e => {
-    let value = e.target.value
+    const value = e.target.value
+    const str = value.split('')
 
+    if (str.join('').replace(/\./g, '').split('').length % 2 === 0 && str.length < 6) {
+      str.push('.')
+    }
+    e.target.value = str.join('')
   })
 })
+

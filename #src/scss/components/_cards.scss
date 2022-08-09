@@ -54,6 +54,11 @@
       pointer-events: none;
     }
   }
+
+  .control-radio .control_indicator:after {
+    display: none;
+    opacity: 0;
+  }
 }
 
 .add-card__btn {
