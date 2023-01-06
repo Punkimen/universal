@@ -1,0 +1,94 @@
+@import './nice-select';
+
+.nice-select {
+  padding: 11px 12px 10px;
+  background: #fff;
+  border: 1px solid #18192F;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: "SFPro", serif;
+  font-weight: 500;
+  margin-bottom: 16px;
+
+  &:hover,
+  &:active {
+    border-color: #2E63E6;
+  }
+
+  .current {
+    color: rgba(96, 125, 139, 0.6);
+  }
+}
+
+.nice-select.open .list {
+  max-height: 366px;
+  min-width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow-y: auto;
+}
+
+.nice-select .option:hover {
+  background: #bbbbbb;
+}
+
+.nice-select .option.selected {
+  background: #2E63E6 !important;
+  font-weight: 500;
+  color: #fff;
+
+  &:hover {
+    background: #2E63E6 !important;
+    font-weight: 500;
+    color: #fff;
+  }
+}
+
+.nice-select .option.disabled {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-button {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #18192F;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #18192F;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #18192F;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(#607D8B, .2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: rgba(#607D8B, .2);
+}
+
+::-webkit-scrollbar-track:active {
+  background: rgba(#607D8B, .2);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
