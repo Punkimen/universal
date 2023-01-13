@@ -2,6 +2,10 @@
   padding: 68px 0;
   background: #EEF1F7;
 
+  @media(max-height: 600px) {
+    padding: 20px 0;
+  }
+
   @media(max-width:$md3) {
     padding: 40px 0;
 
