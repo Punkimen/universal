@@ -42,8 +42,13 @@
       return this;
     }
       
-    // Hide native select
-    this.hide();
+   	// Hide native select
+		this.css({
+			opacity: 0,
+			pointerEvents: "none",
+			position: "absolute",
+			left: 0
+		});
     
     // Create custom markup
     this.each(function() {
